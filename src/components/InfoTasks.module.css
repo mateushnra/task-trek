@@ -1,0 +1,19 @@
+.containerInfoTask{
+    display:grid;
+    grid-template-columns: min-content 1fr;
+    gap: 0.8rem;
+}
+
+.containerInfoTask > h3{
+    font-size: 1.2rem;
+    grid-column: span 2;
+}
+
+.iconSvg{
+    color:var(--c3)
+}
+
+.containerInfoTask > strong{
+    font-size: 2rem;
+    color: var(--p2);
+}

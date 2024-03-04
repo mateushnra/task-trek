@@ -1,0 +1,10 @@
+.header {
+    background: var(--c5);
+    display:flex;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.header > img{
+    width:14rem;
+}

@@ -1,0 +1,33 @@
+.sidebar{
+    background: var(--c4);
+    padding: 1.5rem 1.4rem;
+    border-radius: 10px;
+    max-width: 600px;
+    box-shadow: 0px 3px 15px 3px rgba(79, 79, 79, 0.218);
+}
+
+.title{
+    color: var(--p3);
+    margin-bottom: 2rem;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.containerInfoTask{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap:1.4rem;
+    align-items: flex-start;
+    justify-items: flex-start;
+}
+
+@media (max-width:768px){
+    .sidebar{
+        max-width: 100%;
+    }
+
+    .containerInfoTask{
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap:1rem;
+    }
+}
