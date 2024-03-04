@@ -1,5 +1,6 @@
 import styles from './Sidebar.module.css'
-import { InfoTasks } from './InfoTasks.tsx'
+import { InfoTaskProps } from '../App.tsx'
+import { CheckCircle, ListBullets, Article } from 'phosphor-react';
 
 export interface infoTask {
     label: string;
@@ -7,27 +8,28 @@ export interface infoTask {
     contagem: number;
 }
 
-const infoTasks: infoTask[] = [
-    {label: 'Total de tarefas', icon: "ListBullets", contagem: 0},
-    {label: 'Tarefas concluídas', icon: "CheckCircle", contagem: 1},
-    {label: 'Tarefas pendentes', icon: "Article", contagem: 2}
-]
+export const Sidebar = ({totalTasks, completeTasks, pendingTasks}: InfoTaskProps) => {
 
-export const Sidebar = () => {
     return (
         <aside className={styles.sidebar}>
             <h2 className={styles.title}>Visão Geral</h2>
 
             <div className={styles.containerInfoTask}>
-                {infoTasks.map(info => {
-                    return(
-                        <InfoTasks 
-                            label={info.label} 
-                            icon={info.icon} 
-                            contagem={info.contagem} 
-                        />
-                    )
-                })}
+                <div className={styles.infoTask}>
+                    <h3>Total de tarefas</h3>
+                    <ListBullets size={40} className={styles.iconSvg}/>
+                    <strong>{totalTasks}</strong>
+                </div>
+                <div className={styles.infoTask}>
+                    <h3>Tarefas concluídas</h3>
+                    <CheckCircle size={40} className={styles.iconSvg}/>
+                    <strong>{completeTasks}</strong>
+                </div>
+                <div className={styles.infoTask}>
+                    <h3>Tarefas pendentes</h3>
+                    <Article size={40} className={styles.iconSvg}/>
+                    <strong>{pendingTasks}</strong>
+                </div>
             </div>
         </aside>
     )

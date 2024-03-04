@@ -21,6 +21,26 @@
     justify-items: flex-start;
 }
 
+.infoTask{
+    display:grid;
+    grid-template-columns: min-content 1fr;
+    gap: 0.8rem;
+}
+
+.infoTask > h3{
+    font-size: 1.2rem;
+    grid-column: span 2;
+}
+
+.iconSvg{
+    color:var(--c3)
+}
+
+.infoTask > strong{
+    font-size: 2rem;
+    color: var(--p2);
+}
+
 @media (max-width:768px){
     .sidebar{
         max-width: 100%;

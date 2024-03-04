@@ -12,7 +12,8 @@
     display:flex;
     justify-content: space-between;
     margin-bottom: 2rem;
-    gap:4rem;
+    gap:2rem;
+    flex-wrap: wrap;
 }
 
 .formAddTask > input{
@@ -57,10 +58,20 @@
     border: 2px solid var(--p4);
 }
 
+.formAddTask > button:disabled{
+    opacity: 0.6;
+}
+
+.formAddTask > button:disabled:hover{
+    background: var(--p5);
+    color: var(--white);
+}
+
 .title{
     font-size: 1.6rem;
     color: var(--p3);
     font-weight: bold;
+    margin-bottom: 2rem;
 }
 
 @media (max-width:768px){

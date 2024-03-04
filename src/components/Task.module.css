@@ -1,0 +1,76 @@
+.containerTask{
+    padding: 1rem;
+    background: #46443D;
+    border: 1px solid #6F6F6F;
+    border-radius: 10px;
+
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.containerTask + .containerTask{
+    margin-top:1rem;
+}
+
+.containerTask > div{
+    display: flex;
+    gap: 1rem;
+}
+
+.inputCheck{
+    max-height:10px;
+    position: absolute;
+    visibility: hidden;
+}
+
+.checkTask {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 3px;
+    background: var(--c2);
+    border: 1px solid var(--c4);
+    display: flex;
+    justify-content: flex-start;
+    cursor:pointer;
+}
+
+.inputCheck:checked + .checkTask{
+    background: var(--p5);
+    border: 1px solid var(--p5);
+}
+
+.inputCheck:checked + .checkTask:hover{
+    background: var(--p4);
+    border: 1px solid var(--p4);
+}
+
+.iconCheck{
+    display:none;
+}
+
+.inputCheck:checked + .checkTask > .iconCheck{
+    display: block;
+}
+
+.inputCheck:checked ~ .taskContent{
+    color: var(--c3);
+    text-decoration: line-through;
+  }
+
+.taskContent{
+    font-size: 1.2rem;
+    color: var(--p1);
+    max-width: 50ch;
+}
+
+.iconTrash{
+    color: var(--c2);
+    cursor:pointer;
+}
+
+.iconTrash:hover{
+    color: var;
+    cursor:pointer;
+    color: var(--red1);
+}
